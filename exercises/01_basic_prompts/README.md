@@ -1,97 +1,188 @@
 # Exercise 1: Basic Prompt Engineering for Sales Analysis
 
 ## 🎯 Learning Objectives
-In this exercise, you will learn to:
+By completing this exercise, you will be able to:
 - Create effective prompts for analyzing sales data
 - Extract meaningful insights from customer interactions
 - Generate structured sales reports using GPT-4
 
-## 🔍 Exercise Overview
-You'll work with real sales data to create prompts that extract valuable business insights. This exercise focuses on fundamental prompt engineering techniques using Azure OpenAI Service.
+## 📋 Prerequisites Check
+Before starting, ensure you have:
+- [ ] Completed the setup guide
+- [ ] Validated your Azure OpenAI connection
+- [ ] Activated your Python virtual environment
+- [ ] Installed all requirements
 
-## 📝 Tasks
-
-### Task 1: Basic Sales Metrics (10 minutes)
-1. Open `basic_metrics.py`
-2. Complete the prompt template to extract:
-   - Total sales amount
-   - Number of transactions
-   - Average deal size
-3. Run the script and verify the output matches the expected format
-
-🤔 **Knowledge Check**: What makes a prompt effective for extracting numerical data?
-
-### Task 2: Customer Interaction Analysis (10 minutes)
-1. Open `interaction_analysis.py`
-2. Create prompts to analyze:
-   - Customer communication patterns
-   - Sales cycle duration
-   - Key decision points
-3. Compare results with the provided example outputs
-
-🤔 **Knowledge Check**: How does adding context to your prompt improve the analysis?
-
-### Task 3: Sales Report Generation (10 minutes)
-1. Open `report_generation.py`
-2. Develop prompts that generate:
-   - Executive summary
-   - Key performance indicators
-   - Recommendations
-3. Evaluate the quality of generated reports
-
-## 💡 Tips for Success
-- Start with simple, clear prompts
-- Be specific about the format you want
-- Include relevant context
-- Test with different variations
-
-## 🔨 Getting Started
-
-1. Navigate to the exercise directory:
-   ```bash
-   cd exercises/01_basic_prompts
-   ```
-
-2. Review the sample code:
-   ```python
-   from utils.azure_openai_utils import AzureOpenAIHelper
-   
-   helper = AzureOpenAIHelper()
-   sales_data = helper.load_sales_data()
-   ```
-
-3. Complete the prompt templates in each Python file
-
-## 📊 Sample Data Structure
-```json
-{
-  "transaction_id": "TX001",
-  "customer": {
-    "name": "John Smith",
-    "company": "Tech Solutions Inc"
-  },
-  "total_amount": 24000.00
-}
+## 🗺️ Exercise Roadmap
+```
+Task 1 (10 min) → Task 2 (10 min) → Task 3 (10 min)
+Basic Metrics    Interaction      Report
+Analysis         Analysis         Generation
 ```
 
-## ✅ Success Criteria
-- All scripts run without errors
-- Generated insights are relevant and accurate
-- Output follows the specified format
-- Prompts are clear and reusable
+## 📝 Detailed Task Instructions
 
-## 🎯 Challenge Tasks
-Once you've completed the main tasks, try these challenges:
-1. Add error handling for edge cases
-2. Implement dynamic prompt generation
-3. Create a comparative analysis across different time periods
+### Task 1: Basic Sales Metrics (10 minutes)
 
-## 📚 Resources
-- [Azure OpenAI Best Practices](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/best-practices)
-- [Prompt Engineering Guide](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/prompt-engineering)
-- Sample solutions in the `solutions` directory
+#### Step 1: Prepare Your Environment
+```bash
+# Ensure you're in the exercise directory
+cd exercises/01_basic_prompts
 
-## 🆘 Need Help?
-- Check the troubleshooting guide
-- Review the solution hints
-- Ask your instructor for guidance
+# Verify your virtual environment is active
+# Your prompt should show (venv)
+```
+
+#### Step 2: Open the Exercise File
+1. Open `basic_metrics.py` in your editor
+2. Locate the `prompts` dictionary containing template prompts
+3. You'll see three TODO sections:
+   ```python
+   prompts = {
+       "total_sales": "...",
+       "transaction_count": "...",
+       "average_deal": "..."
+   }
+   ```
+
+#### Step 3: Complete the Prompts
+1. Total Sales Prompt:
+   ```python
+   # Example structure:
+   total_sales = """
+   Analyze the following sales data and calculate the total sales amount.
+   Return only the numerical value without any text or formatting.
+   
+   Sales Data:
+   {sales_data}
+   """
+   ```
+
+2. Expected Output Format:
+   ```
+   71500.00
+   ```
+
+🤔 **Knowledge Check Point 1**:
+- Does your prompt specify exact output format?
+- Have you removed any unnecessary context?
+- Is the instruction clear and unambiguous?
+
+#### Step 4: Run and Validate
+```bash
+# Run the script
+python basic_metrics.py
+
+# Expected output:
+🚀 Starting basic sales metrics analysis...
+📊 Sales Summary:
+[Your generated metrics will appear here]
+```
+
+#### Step 5: Refine Your Prompts
+If the output isn't as expected:
+1. Check the format specification
+2. Adjust the constraints
+3. Run again to verify
+
+### Task 2: Customer Interaction Analysis (10 minutes)
+
+[Similar detailed steps for Task 2...]
+
+### Task 3: Sales Report Generation (10 minutes)
+
+[Similar detailed steps for Task 3...]
+
+## ✅ Success Validation Checklist
+
+### Task 1 Validation
+- [ ] Total sales calculation matches expected value
+- [ ] Transaction count is accurate
+- [ ] Average deal size is correctly calculated
+- [ ] All outputs are properly formatted
+
+### Task 2 Validation
+- [ ] Communication patterns are identified
+- [ ] Sales cycle duration is accurate
+- [ ] Decision points are clearly highlighted
+
+### Task 3 Validation
+- [ ] Executive summary is concise and clear
+- [ ] KPIs are accurately reported
+- [ ] Recommendations are actionable
+
+## 🔍 Code Review Guidelines
+
+When reviewing your prompts, check:
+```python
+# Good Prompt Example:
+"""
+Calculate the total sales amount from the data.
+Requirements:
+1. Sum all 'total_amount' fields
+2. Return only the number
+3. Use 2 decimal places
+"""
+
+# Bad Prompt Example:
+"""
+What are the total sales?
+"""
+```
+
+## 🆘 Troubleshooting Guide
+
+### Common Issues and Solutions
+
+1. Incorrect Output Format
+   ```
+   Problem: "Total sales are $71,500.00"
+   Solution: Specify "Return only the number without currency symbols"
+   ```
+
+2. Missing Data
+   ```
+   Problem: "Cannot find sales_data"
+   Solution: Check file path in load_sales_data()
+   ```
+
+3. Prompt Too Vague
+   ```
+   Problem: Getting narrative responses
+   Solution: Add specific format requirements
+   ```
+
+## 📚 Additional Resources
+- [Azure OpenAI Prompt Engineering Guide](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/prompt-engineering)
+- [Sample Solutions](./solutions/)
+- [Advanced Challenges](./challenges/)
+
+## 🎯 Extension Activities
+Once you've completed the main tasks:
+
+1. Error Handling
+   ```python
+   # Add validation for edge cases
+   if not sales_data:
+       handle_empty_data()
+   ```
+
+2. Dynamic Prompts
+   ```python
+   # Create prompt templates
+   prompt = template.format(
+       metric="total_sales",
+       format="numerical"
+   )
+   ```
+
+3. Comparative Analysis
+   ```python
+   # Compare performance across periods
+   analyze_trends(current_data, historical_data)
+   ```
+
+Need help? 
+- Check solution_hints.md
+- Ask your instructor
+- Review the example code
