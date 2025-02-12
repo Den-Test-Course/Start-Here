@@ -1,0 +1,147 @@
+{
+  "sales_records": [
+    {
+      "transaction_id": "TX001",
+      "date": "2024-01-15",
+      "customer": {
+        "id": "C1001",
+        "name": "John Smith",
+        "company": "Tech Solutions Inc",
+        "segment": "Enterprise"
+      },
+      "product": {
+        "id": "P101",
+        "name": "Enterprise Cloud Suite",
+        "category": "Software",
+        "price": 12000.00
+      },
+      "quantity": 2,
+      "total_amount": 24000.00,
+      "payment_terms": "Net 30",
+      "sales_rep": "Alice Johnson",
+      "interaction_history": [
+        {
+          "date": "2024-01-01",
+          "type": "Email",
+          "notes": "Initial inquiry about cloud solutions"
+        },
+        {
+          "date": "2024-01-05",
+          "type": "Demo",
+          "notes": "Product demo with technical team"
+        },
+        {
+          "date": "2024-01-10",
+          "type": "Meeting",
+          "notes": "Price negotiation and feature discussion"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TX002",
+      "date": "2024-01-16",
+      "customer": {
+        "id": "C1002",
+        "name": "Sarah Williams",
+        "company": "Digital Marketing Pro",
+        "segment": "SMB"
+      },
+      "product": {
+        "id": "P102",
+        "name": "Analytics Dashboard",
+        "category": "Software",
+        "price": 2500.00
+      },
+      "quantity": 1,
+      "total_amount": 2500.00,
+      "payment_terms": "Net 15",
+      "sales_rep": "Bob Wilson",
+      "interaction_history": [
+        {
+          "date": "2024-01-12",
+          "type": "Website",
+          "notes": "Downloaded product whitepaper"
+        },
+        {
+          "date": "2024-01-14",
+          "type": "Call",
+          "notes": "Discussed features and pricing"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TX003",
+      "date": "2024-01-17",
+      "customer": {
+        "id": "C1003",
+        "name": "Michael Brown",
+        "company": "Global Manufacturing Ltd",
+        "segment": "Enterprise"
+      },
+      "product": {
+        "id": "P103",
+        "name": "IoT Monitoring System",
+        "category": "Hardware",
+        "price": 8000.00
+      },
+      "quantity": 5,
+      "total_amount": 40000.00,
+      "payment_terms": "Net 45",
+      "sales_rep": "Charlie Davis",
+      "interaction_history": [
+        {
+          "date": "2023-12-20",
+          "type": "Conference",
+          "notes": "Met at Industry Tech Conference"
+        },
+        {
+          "date": "2024-01-05",
+          "type": "Site Visit",
+          "notes": "Assessed installation requirements"
+        },
+        {
+          "date": "2024-01-15",
+          "type": "Meeting",
+          "notes": "Final proposal presentation"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TX004",
+      "date": "2024-01-18",
+      "customer": {
+        "id": "C1001",
+        "name": "John Smith",
+        "company": "Tech Solutions Inc",
+        "segment": "Enterprise"
+      },
+      "product": {
+        "id": "P104",
+        "name": "Support Package",
+        "category": "Service",
+        "price": 5000.00
+      },
+      "quantity": 1,
+      "total_amount": 5000.00,
+      "payment_terms": "Net 30",
+      "sales_rep": "Alice Johnson",
+      "interaction_history": [
+        {
+          "date": "2024-01-17",
+          "type": "Email",
+          "notes": "Support package inquiry for existing cloud suite"
+        },
+        {
+          "date": "2024-01-18",
+          "type": "Call",
+          "notes": "Confirmed support requirements"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "generated_date": "2024-01-20",
+    "currency": "USD",
+    "total_records": 4
+  }
+}
